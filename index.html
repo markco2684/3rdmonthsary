@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 3rd ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <section class="hero" id="home">
+        <p class="subtitle">Special surprise</p>
+        <h1>Happy 3rd❤️</h1>
+        <p>Months of memories, love, and happiness with you.</p>
+        <button id="openSurprise">Open 💌</button>
+    </section>
+
+    <section class="intro">
+        <h2>Three Months With You 🌷</h2>
+        <p>
+            Thank you for being part of my life. You make my days
+            more special, and I am thankful for every memory we share.
+            This little website is made with love, just for you.
+        </p>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <h2>Our Little Memories 📸</h2>
+        <p class="description">Click each picture to see a special message!</p>
+
+        <div class="photo-grid">
+
+            <button class="photo-card"
+                data-photo="photo1.jpg"
+                data-title="First and favourite pic❤️"
+                data-message="First open cam HAHA nasa shop and ang dungis ko dito 😭.">
+                <img src="photo1.jpg" alt="Our first memory">
+                <span>First pic 💕</span>
+            </button>
+
+            <button class="photo-card"
+                data-photo="second.jpg"
+                data-title="HOME"
+                data-message="ordinary boring days feel more special when I'm with you kahit through screen lang.">
+                <img src="second.jpg" alt="Our happy moment">
+                <span>My Happy pill🌸</span>
+            </button>
+
+            <button class="photo-card"
+                data-photo="photo2.jpeg"
+                data-title="Satin flower Bouquet 💐"
+                data-message="First and favourite gift ko sayo.">
+                <img src="photo2.jpeg" alt="A picture of us">
+                <span>Bouquet 💗</span>
+            </button>
+
+            <button class="photo-card"
+                data-photo="photo4.jpeg"
+                data-title="My Favorite Person "
+                data-message="I am so thankful that I got to know someone as special and beautiful as you.">
+                <img src="photo4.jpeg" alt="My favorite person">
+                <span>My Favorite Person 🌷</span>
+            </button>
+
+            <button class="photo-card"
+                data-photo="photo5.jpeg"
+                data-title="Beautiful Memories ✨"
+                data-message="I love you with all my heart.">
+                <img src="photo5.jpeg" alt="Beautiful lady">
+                <span>Beautiful Lady ✨</span>
+            </button>
+
+            <button class="photo-card"
+                data-photo="photo6.jpg"
+                data-title="More Months With You 💞"
+                data-message="Three months down, and hopefully many more months to celebrate.">
+                <img src="photo6.jpg" alt="More memories together">
+                <span>Favourite picture 💞</span>
+            </button>
+
+        </div>
+    </section>
+
+    <section class="letter-section">
+        <h2>A Little Reminder 💌</h2>
+        <p>
+            Thank you for the laughs, the conversations, and the little
+            things that make our relationship meaningful. I appreciate
+            you more than words can explain. ❤️
+        </p>
+    </section>
+
+    <section class="ending">
+        <h2>Here's to More Months Together! 💗</h2>
+        <p>Thank you for being part of my story. I love you!</p>
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            TOP ↑
+        </button>
+    </section>
+
+    <footer>Mahal kita palagi ❤️</footer>
+
+    <!-- MONTHSARY LETTER POPUP -->
+    <div class="popup" id="letterPopup">
+        <div class="popup-content">
+            <button class="close" data-close="letterPopup"
+                aria-label="Close letter">&times;</button>
+
+            <h2>Letter ❤️</h2>
+            <p id="letterText"></p>
+
+            <button data-close="letterPopup" id="continueButton">
+                Memories 💗
+            </button>
+        </div>
+    </div>
+
+    <!-- PICTURE MESSAGE POPUP -->
+    <div class="popup" id="photoPopup">
+        <div class="popup-content">
+            <button class="close" data-close="photoPopup"
+                aria-label="Close picture">&times;</button>
+
+            <h2 id="photoTitle">A Special Memory 💕</h2>
+            <img id="popupPhoto" src="" alt="Our memory">
+            <p id="photoMessage"></p>
+
+            <button data-close="photoPopup">I Love You! ❤️</button>
+        </div>
+    </div>
+
+    <!-- BACKGROUND MUSIC -->
+    <audio id="backgroundMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+</body>
+</html>

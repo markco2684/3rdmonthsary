@@ -1,0 +1,255 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #fff0f5;
+    color: #663344;
+    text-align: center;
+    line-height: 1.7;
+}
+
+section {
+    padding: 75px 20px;
+}
+
+h1, h2 {
+    color: #d63384;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: clamp(28px, 5vw, 40px);
+    margin-bottom: 18px;
+}
+
+p {
+    max-width: 700px;
+    margin: 0 auto 18px;
+}
+
+button {
+    cursor: pointer;
+    font: inherit;
+}
+
+button:not(.photo-card) {
+    background: #e75480;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 13px 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:not(.photo-card):hover {
+    background: #c92f6c;
+    transform: translateY(-3px);
+}
+
+/* WELCOME */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffd6e5, #fff5f8);
+    padding: 30px 20px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 8vw, 65px);
+    margin: 20px 0;
+}
+
+.hero p {
+    font-size: 17px;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #a64d79;
+    font-size: 13px !important;
+}
+
+/* INTRODUCTION */
+.intro, .letter-section {
+    background: #fff8fb;
+}
+
+/* GALLERY */
+.gallery {
+    background: #ffeaf2;
+}
+
+.description {
+    margin-bottom: 35px;
+}
+
+.photo-grid {
+    max-width: 950px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.photo-card {
+    border: none;
+    background: white;
+    padding: 10px 10px 16px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px #9d4b6c18;
+    color: #a83266;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.photo-card:hover {
+    transform: translateY(-6px);
+}
+
+.photo-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: block;
+    object-fit: cover;
+    border-radius: 12px;
+    background: #fbd2e1;
+    margin-bottom: 12px;
+}
+
+.photo-card span {
+    display: block;
+}
+
+/* ENDING */
+.ending {
+    background: linear-gradient(135deg, #ffd6e5, #fff0f5);
+    padding: 85px 20px;
+}
+
+footer {
+    padding: 20px;
+    background: #d63384;
+    color: white;
+    font-size: 13px;
+}
+
+/* POPUPS */
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: #351421bb;
+    padding: 18px;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup.show {
+    display: flex;
+    animation: fadeIn 0.25s ease;
+}
+
+.popup-content {
+    background: #fff8fb;
+    width: 100%;
+    max-width: 520px;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 35px 25px;
+    border-radius: 22px;
+    box-shadow: 0 10px 40px #0002;
+    animation: popIn 0.3s ease;
+}
+
+.popup-content h2 {
+    margin: 10px 20px 20px;
+}
+
+.popup-content p {
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+#letterText {
+    text-align: left;
+    line-height: 1.9;
+    margin-bottom: 22px;
+}
+
+#popupPhoto {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 18px;
+}
+
+.close {
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    background: none !important;
+    color: #d63384 !important;
+    font-size: 30px;
+    padding: 0 8px !important;
+    box-shadow: none !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
+    section {
+        padding: 60px 16px;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 13px;
+    }
+
+    .photo-card {
+        padding: 7px 7px 13px;
+        font-size: 13px;
+    }
+
+    .popup-content {
+        padding: 32px 18px;
+    }
+}
+
+@media (max-width: 350px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+}
